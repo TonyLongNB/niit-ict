@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Alanoo Blog </title>
+    <!-- Favicon images-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/ico/favicon.png' %}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Start insert header -->
+	  {% include 'header.html' %}
+	  <!-- End insert header -->
+
+    {% include 'nav.html' %}
+
+    <br> <br/>
+    <div class="container">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+       
+    <!-- Start insert footer -->
+	  {% include 'footer.html' %}
+
+  </body>
+</html>
